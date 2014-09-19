@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this._grid = new System.Windows.Forms.DataGridView();
             this._dateFrom = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -36,13 +37,13 @@
             this._dateTo = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this._checkMessageToggle = new System.Windows.Forms.CheckBox();
+            this._txtSearch = new SkypeMessageSearch.SearchTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this._labelFooter = new System.Windows.Forms.ToolStripStatusLabel();
             this._toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this._comboContact = new System.Windows.Forms.ComboBox();
             this._btnContactClear = new System.Windows.Forms.Button();
-            this._txtSearch = new SkypeMessageSearch.SearchTextBox();
+            this._comboContact = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this._grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -132,6 +133,16 @@
             this._checkMessageToggle.UseVisualStyleBackColor = true;
             this._checkMessageToggle.CheckedChanged += new System.EventHandler(this._checkMessageToggle_CheckedChanged);
             // 
+            // _txtSearch
+            // 
+            this._txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtSearch.Location = new System.Drawing.Point(6, 22);
+            this._txtSearch.Name = "_txtSearch";
+            this._txtSearch.Placeholder = "Search Message";
+            this._txtSearch.Size = new System.Drawing.Size(248, 23);
+            this._txtSearch.TabIndex = 0;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -160,14 +171,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Contact Filter";
             // 
-            // _comboContact
-            // 
-            this._comboContact.FormattingEnabled = true;
-            this._comboContact.Location = new System.Drawing.Point(7, 23);
-            this._comboContact.Name = "_comboContact";
-            this._comboContact.Size = new System.Drawing.Size(180, 23);
-            this._comboContact.TabIndex = 0;
-            // 
             // _btnContactClear
             // 
             this._btnContactClear.Image = global::SkypeMessageSearch.Properties.Resources.clear;
@@ -179,15 +182,13 @@
             this._btnContactClear.UseVisualStyleBackColor = true;
             this._btnContactClear.Click += new System.EventHandler(this._btnContactClear_Click);
             // 
-            // _txtSearch
+            // _comboContact
             // 
-            this._txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._txtSearch.Location = new System.Drawing.Point(6, 22);
-            this._txtSearch.Name = "_txtSearch";
-            this._txtSearch.Placeholder = "Search Message";
-            this._txtSearch.Size = new System.Drawing.Size(248, 23);
-            this._txtSearch.TabIndex = 0;
+            this._comboContact.FormattingEnabled = true;
+            this._comboContact.Location = new System.Drawing.Point(7, 23);
+            this._comboContact.Name = "_comboContact";
+            this._comboContact.Size = new System.Drawing.Size(180, 23);
+            this._comboContact.TabIndex = 0;
             // 
             // MainView
             // 
@@ -201,6 +202,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this._grid);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainView";
             this.Text = "Skype Message Search";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

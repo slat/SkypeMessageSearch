@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper">
       <HintPath>..\packages\Dapper.1.34\lib\net40\Dapper.dll</HintPath>
@@ -118,6 +121,8 @@
   <ItemGroup>
     <None Include="Resources\clear.png" />
     <None Include="Resources\search.png" />
+    <None Include="Resources\App.ico" />
+    <Content Include="App.ico" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
